@@ -1,0 +1,6 @@
+venv
+.vscode
+__pycache__
+.history
+migrations
+app/app.db

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VMS-Admin Login</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <style>
+        label {
+            line-height: 22px;
+            font-family: 'Roboto';
+            font-size: 14px;
+        }
+        body {
+            background-color: #65cae0;/*#6dd8f0*/
+        }
+        #username {
+            position: absolute; width: 180px; left: 78px;
+        }
+        #password {
+            position: absolute; width: 180px; left: 78px;
+        }
+        #loginBox {
+            background-color: lightgrey; 
+            position: absolute;
+            margin: 0 auto;
+            margin-left: -160px;
+            margin-top: -150px;
+            top: 50%;
+            left: 50%;
+            width: 320px;
+            height: 270px;
+            border-radius: 6px;
+        }
+        #submitButton {
+            position: absolute;
+            top:160px;
+            background-color: #0f86f5;
+            width: 300px;
+            height: 32px;
+            left: 50%;
+            margin-left: -150px;
+            border-radius: 8px;
+            text-align: center;
+
+        }
+        #dsub {
+            display: inline-block;
+            color: white;
+            font-family: 'Roboto';
+            font-size: 20px;
+            height: 32px;
+            line-height: 32px;
+        }
+        #logo {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginBox">
+        <br>
+        <span style="position: absolute; text-align: center; width: 100%; font-family: 'Roboto'">VMS-Admin Login:</span><br>
+        <div id="loginForm" style="position: absolute; top:50px">
+            <form style="margin-right: auto; margin-left: auto;" method="POST" id="lgform">
+                <span style="position:absolute; top:6px; width: 320px;">
+                    {{ form.hidden_tag() }}
+                    <img id="logo" src="/resources/VMS-Admin.png"/><br>
+                    {{ form.username.label }}
+                    {{ form.username() }}<br>
+                    {% for error in form.username.errors %}
+                    <span style="color: red; font-family: 'Roboto'; font-size:12px; padding-left: 7em;">[{{error}}]</span><br>
+                    {% endfor %}
+                    {{ form.password.label }}
+                    {{ form.password() }}<br>
+                    {% for error in form.password.errors %}
+                    <span style="color: red; font-family: 'Roboto'; font-size:12px; padding-left: 7em;">[{{error}}]</span><br>
+                    {% endfor %}
+                    <span style="color: red; font-family: 'Roboto'; font-size:12px; padding-left: 7em;">{{Error}}</span><br>
+                    <div id="submitButton" onclick="document.getElementById('lgform').submit()"><span id="dsub">Submit</span></div>
+                    <button style="display: none;"></button> 
+                </span>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
