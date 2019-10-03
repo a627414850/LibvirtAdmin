@@ -1,3 +1,9 @@
+{% extends "iframeBase.html" %}
+
+{% set title = "User Registration" %}
+{% set stylesheets = ['/css/registration.css']%}
+
+{% block body %}
 <h1> User Registration: </h1>
 <form action="register" method="POST">
     {{ form.hidden_tag() }}
@@ -31,3 +37,4 @@
     </p>
     <p>{{ form.submit() }}</p>
 </form>
+{% endblock %}

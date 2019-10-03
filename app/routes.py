@@ -37,4 +37,4 @@ def logout():
 def getResource():
     if request.query_string == "registration":
         iframeBody = render_template('registration.html')
-    return render_template('iframeBase.html',body=iframeBody)
+    return iframeBody
