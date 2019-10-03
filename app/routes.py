@@ -1,6 +1,6 @@
 from flask import render_template, flash, redirect, request
 from app import flask_app as app
-from app.forms import LoginForm
+from app.forms import LoginForm, RegistrationForm
 from flask_login import current_user, login_user, logout_user, login_required
 from app.models import User
 from werkzeug.urls import url_parse
@@ -36,5 +36,6 @@ def logout():
 @login_required
 def getResource():
     if request.query_string == "registration":
-        iframeBody = render_template('registration.html')
+        form = RegistrationForm()
+        iframeBody = render_template('registration.html', form = form)
     return iframeBody
