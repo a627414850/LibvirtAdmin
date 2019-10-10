@@ -5,3 +5,4 @@ __pycache__
 migrations
 app/app.db
 app.db
+.DS_Store
