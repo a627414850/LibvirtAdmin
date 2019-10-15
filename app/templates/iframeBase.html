@@ -3,14 +3,14 @@
 <head>
     <title>{{ title }}</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'/>
-    <link rel="stylesheet" href="/css/mp_main.css"/>
+    <link rel="stylesheet" href="/static/css/mp_main.css"/>
     {% for stylesheet in stylesheets %}
         <link rel="stylesheet" href="{{ stylesheet }}"/>
     {% endfor %}
     {% for script in scripts %}
         <script src="{{ script }}"></script>
     {% endfor %}
-    <script src="/js/ajaxRequest.js"></script>
+    <script src="/static/js/ajaxRequest.js"></script>
 </head>
 <body>
         {% block body %}{%endblock%}

@@ -3,18 +3,18 @@
 <head>
     <title>VMS-Admin</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'/>
-    <link rel="stylesheet" href="/css/mp_main.css"/>
-    <script src="/js/mp_main.js"></script>
-    <script src="/js/ajaxRequest.js"></script>
+    <link rel="stylesheet" href="/static/css/mp_main.css"/>
+    <script src="/static/js/mp_main.js"></script>
+    <script src="/static/js/ajaxRequest.js"></script>
 <body>
     <div id="topbar">
-        <img id="logo" src="/resources/VMS-Admin.png" onclick="location.href='main'">
+        <img id="logo" src="/static/resources/VMS-Admin.png" onclick="location.href='main'">
         <div id="navbar">
-            <a id="instances-btn"><img src="/resources/InstanceGlyph.png"/>&nbsp;&nbsp;VMs</a>
-            <a id="nodes-btn"><img src="/resources/NodesGlyph.png"/>&nbsp;&nbsp;Nodes</a>
-            <a id="usr-adm-btn"><img src="/resources/UsersGlyph.png"/>&nbsp;&nbsp;Users</a>
-            <a id="log-btn"><img src="/resources/LogsGlyph.png"/>&nbsp;&nbsp;Logs</a>
-            <a id="usr-btn" style="float: right;"><img src="/resources/UsersGlyph.png"/>&nbsp;&nbsp;{{user.username}}&#9660;</a>
+            <a id="instances-btn"><img src="/static/resources/InstanceGlyph.png"/>&nbsp;&nbsp;VMs</a>
+            <a id="nodes-btn"><img src="/static/resources/NodesGlyph.png"/>&nbsp;&nbsp;Nodes</a>
+            <a id="usr-adm-btn"><img src="/static/resources/UsersGlyph.png"/>&nbsp;&nbsp;Users</a>
+            <a id="log-btn"><img src="/static/resources/LogsGlyph.png"/>&nbsp;&nbsp;Logs</a>
+            <a id="usr-btn" style="float: right;"><img src="/static/resources/UsersGlyph.png"/>&nbsp;&nbsp;{{user.username}}&#9660;</a>
         </div>
     </div>
     <div id="view">{% block view %}{%endblock%}</div>

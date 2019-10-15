@@ -64,7 +64,7 @@
             <form style="margin-right: auto; margin-left: auto;" method="POST" id="lgform">
                 <span style="position:absolute; top:6px; width: 320px;">
                     {{ form.hidden_tag() }}
-                    <img id="logo" src="/resources/VMS-Admin.png"/><br>
+                    <img id="logo" src="/static/resources/VMS-Admin.png"/><br>
                     {{ form.username.label }}
                     {{ form.username() }}<br>
                     {% for error in form.username.errors %}
