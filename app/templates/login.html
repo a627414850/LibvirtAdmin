@@ -65,12 +65,12 @@
                 <span style="position:absolute; top:6px; width: 320px;">
                     {{ form.hidden_tag() }}
                     <img id="logo" src="/static/resources/VMS-Admin.png"/><br>
-                    {{ form.username.label }}
+                    &nbsp;&nbsp;{{ form.username.label }}
                     {{ form.username() }}<br>
                     {% for error in form.username.errors %}
                     <span style="color: red; font-family: 'Roboto'; font-size:12px; padding-left: 7em;">[{{error}}]</span><br>
                     {% endfor %}
-                    {{ form.password.label }}
+                    &nbsp;&nbsp;{{ form.password.label }}
                     {{ form.password() }}<br>
                     {% for error in form.password.errors %}
                     <span style="color: red; font-family: 'Roboto'; font-size:12px; padding-left: 7em;">[{{error}}]</span><br>
