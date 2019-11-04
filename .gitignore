@@ -6,3 +6,4 @@ migrations
 app/app.db
 app.db
 .DS_Store
+logs
