@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>VMS-Admin</title>
+    <title>{% if title %}{{ title }}{% else %}VMS-Admin{% endif %}</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'/>
     <link rel="stylesheet" href="/static/css/mp_main.css"/>
     <script src="/static/js/mp_main.js"></script>
     <script src="/static/js/ajaxRequest.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <body>
     <div id="topbar">
         <img id="logo" src="/static/resources/VMS-Admin.png" onclick="location.href='main'">
