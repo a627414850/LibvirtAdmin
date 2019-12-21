@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>VMS-Admin Login</title>
+    <title>LibvirtAdmin Login</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <style>
         label {
@@ -59,12 +59,12 @@
 <body>
     <div id="loginBox">
         <br>
-        <span style="position: absolute; text-align: center; width: 100%; font-family: 'Roboto'">VMS-Admin Login:</span><br>
+        <span style="position: absolute; text-align: center; width: 100%; font-family: 'Roboto'">LibvirtAdmin Login:</span><br>
         <div id="loginForm" style="position: absolute; top:50px">
             <form style="margin-right: auto; margin-left: auto;" method="POST" id="lgform">
                 <span style="position:absolute; top:6px; width: 320px;">
                     {{ form.hidden_tag() }}
-                    <img id="logo" src="/static/resources/VMS-Admin.png"/><br>
+                    <img id="logo" src="/static/resources/LibvirtAdmin.png"/><br>
                     &nbsp;&nbsp;{{ form.username.label }}
                     {{ form.username() }}<br>
                     {% for error in form.username.errors %}
