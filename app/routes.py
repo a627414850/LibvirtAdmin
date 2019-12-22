@@ -9,7 +9,8 @@ from werkzeug.urls import url_parse
 @app.route('/index')
 @login_required
 def index():
-    return render_template('index.html',title='HOME:P2')
+    return render_template('base.html',view='')
+    #return render_template('index.html',title='HOME:P2')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
