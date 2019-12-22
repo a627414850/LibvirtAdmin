@@ -1,0 +1,17 @@
+#message {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    width: 482px;
+    text-align: center;
+    font-family: 'roboto';
+    margin: 0 0 0 -241px;
+}
+@media only screen and (max-width: 500px) {
+    #message {
+        text-align: left !important;
+        width: auto !important;
+        left: auto !important;
+        margin: 0 !important;
+    }
+}

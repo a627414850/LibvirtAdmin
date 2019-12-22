@@ -1,7 +1,13 @@
-{% extends "Base.html" %}
-{% set title = "LibvirtAdmin: Internal Server Error"}
-{% block view %}
-<h1>An unexpected error has occurred</h1>
-<p>Sorry for the inconvenience!</p>
-<p><a href="{{ url_for('index') }}">Back</a></p>
+{% extends "iframeBase.html" %}
+{% set title = "LibvirtAdmin: Internal Server Error" %}
+{% set stylesheets = ["/static/css/mp_main.css","/static/css/error.css","https://fonts.googleapis.com/css?family=Roboto"] %}
+{% block body %}
+<div id="topbar">
+    <img id="logo" src="/static/resources/LibvirtAdmin.png" onclick="location.href='main'">
+</div>
+<span id="message">
+    <h1>An unexpected error has occurred</h1>
+    <p>Sorry for the inconvenience!</p>
+    <p><a href="{{ url_for('index') }}">Back</a></p>
+</span>
 {% endblock %}
