@@ -1,18 +1,12 @@
 from flask import render_template, flash, redirect, request
-from app import flask_app as app
-from app.forms import LoginForm, RegistrationForm
-from flask_login import current_user, login_user, logout_user, login_required
+from app.auth import bp
+from app.auth.forms import LoginForm, RegistrationForm
+from flask_login import current_user, login_user, logout_user
 from app.models import User
+
 from werkzeug.urls import url_parse
 
-@app.route('/')
-@app.route('/index')
-@login_required
-def index():
-    return render_template('base.html',view='')
-    #return render_template('index.html',title='HOME:P2')
-
-@app.route('/login', methods=['GET', 'POST'])
+@bp.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
         return redirect('/index')
@@ -28,15 +22,7 @@ def login():
         return redirect(next_page)
     return render_template('login.html', form=form)
 
-@app.route('/logout')
+@bp.route('/logout')
 def logout():
     logout_user()
     return redirect('/index')
-
-@app.route('/iframeresource')
-@login_required
-def getResource():
-    if request.query_string == "registration":
-        form = RegistrationForm()
-        iframeBody = render_template('registration.html', form = form)
-    return iframeBody
